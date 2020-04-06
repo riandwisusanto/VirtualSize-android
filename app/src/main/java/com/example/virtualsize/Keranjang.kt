@@ -1,7 +1,7 @@
 package com.example.virtualsize
 
-class ListProduk {
-    lateinit var jenis:String
+class Keranjang {
+    lateinit var user:String
     lateinit var produk:String
     lateinit var toko:String
     lateinit var harga:String
@@ -9,8 +9,8 @@ class ListProduk {
     lateinit var gambar:String
 
     constructor(){}
-    constructor(jenis:String, produk:String, toko:String, harga:String, lokasi:String, gambar:String){
-        this.jenis = jenis
+    constructor(user:String, produk:String, toko:String, harga:String, lokasi:String, gambar:String){
+        this.user = user
         this.produk = produk
         this.toko = toko
         this.harga = harga
