@@ -7,24 +7,25 @@
     tools:context=".ActivityTentang">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarBantuan"
+        android:id="@+id/toolbarTentang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
             android:text="Tentang Aplikasi"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             android:textSize="20dp"/>
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbarBantuan" >
+        android:layout_below="@+id/toolbarTentang" >
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent">

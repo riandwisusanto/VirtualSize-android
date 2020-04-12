@@ -28,6 +28,6 @@
         <activity android:name=".ActivityProfil" />
         <activity android:name=".ActivityTentang" />
         <activity android:name=".ActivityUlasKami" />
-    </application>
 
+    </application>
 </manifest>

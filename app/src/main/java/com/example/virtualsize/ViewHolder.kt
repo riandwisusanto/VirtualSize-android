@@ -16,13 +16,13 @@ class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
         //item click
         itemView.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view:View) {
-                mClickListener!!.onItemClick(view, getAdapterPosition())
+                mClickListener!!.onItemClick(view, adapterPosition)
             }
         })
         //item long click
         itemView.setOnLongClickListener(object: View.OnLongClickListener {
             override fun onLongClick(view:View):Boolean {
-                mClickListener!!.onItemLongClick(view, getAdapterPosition())
+                mClickListener!!.onItemLongClick(view, adapterPosition)
                 return true
             }
         })
@@ -36,10 +36,10 @@ class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView) {
         val mLokasi = mView.findViewById(R.id.lokasiProduk) as TextView
         val mGambar = mView.findViewById(R.id.imgProduk) as ImageView
         //set data to views
-        mProduk.setText(produk)
-        mToko.setText(toko)
-        mHarga.setText(harga)
-        mLokasi.setText(lokasi)
+        mProduk.text = produk
+        mToko.text = toko
+        mHarga.text = harga
+        mLokasi.text = lokasi
         Picasso.get().load(gambar).into(mGambar)
     }
     //interface to send callbacks

@@ -6,7 +6,5 @@
     <color name="colorFirebrick">#F62817</color>
     <color name="colorGold">#FDD017</color>
 
-    <color name="colorSecondary">#6200EE</color>
-    <color name="colorSecondaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 </resources>

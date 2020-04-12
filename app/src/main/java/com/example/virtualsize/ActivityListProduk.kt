@@ -143,27 +143,9 @@ class ActivityListProduk : AppCompatActivity() {
                     override fun onItemClick(view:View, position:Int) {
 
                         val namaProduk = view.findViewById(R.id.namaProduk) as TextView
-                        val namaToko = view.findViewById(R.id.namaToko) as TextView
-                        val hargaProduk = view.findViewById(R.id.hargaProduk) as TextView
-                        val lokasiProduk = view.findViewById(R.id.lokasiProduk) as TextView
-                        val imgProduk = view.findViewById(R.id.imgProduk) as ImageView
-
                         val namaP = namaProduk.text.toString()
-                        val nToko = namaToko.text.toString()
-                        val hargaP = hargaProduk.text.toString()
-                        val lokasiP = lokasiProduk.text.toString()
-                        val imgP = imgProduk.drawable
-                        val bitmap1 = (imgP as BitmapDrawable).bitmap
-
                         val intent = Intent(view.context, ActivityDetail::class.java)
-                        val stream = ByteArrayOutputStream()
-                        bitmap1.compress(Bitmap.CompressFormat.PNG, 100, stream)
-                        val bytes = stream.toByteArray()
-                        intent.putExtra("gambar", bytes)
                         intent.putExtra("namaProduk", namaP)
-                        intent.putExtra("namaToko", nToko)
-                        intent.putExtra("hargaProduk", hargaP)
-                        intent.putExtra("lokasiProduk", lokasiP)
                         startActivity(intent)
 
 //                        tambahKeranjang.setOnClickListener {

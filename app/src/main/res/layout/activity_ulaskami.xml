@@ -10,15 +10,16 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarUlasan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
+            android:layout_marginTop="40dp"
             android:text="Ulasan"
-            android:textColor="@android:color/black"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
             android:textSize="20dp"/>
     </androidx.appcompat.widget.Toolbar>
 
