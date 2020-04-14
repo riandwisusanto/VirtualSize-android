@@ -6,8 +6,11 @@ import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.TextUtils
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.google.firebase.database.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail.*
@@ -52,6 +55,28 @@ class ActivityDetail : AppCompatActivity() {
                 }
             }
             override fun onCancelled(databaseError: DatabaseError) {}
+        })
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Keranjang")
+        btnTambahKeranjang.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(view:View) {
+                val produk = namaProduk.text.toString().trim()
+                val toko = namaToko.text.toString().trim()
+                val harga = hargaProduk.text.toString().trim()
+                val lokasi = lokasiProduk.text.toString().trim()
+                val gambar = imgProduk.toString().trim()
+                if (!TextUtils.isEmpty(produk) && !TextUtils.isEmpty(toko) && !TextUtils.isEmpty(lokasi)
+                    && !TextUtils.isEmpty(harga) && !TextUtils.isEmpty(gambar))
+                {
+                    val keranjang = Keranjang(produk, toko, harga, lokasi, gambar)
+                    databaseReference.child(produk).setValue(keranjang)
+                    Toast.makeText(this@ActivityDetail, "Data Terkirim", Toast.LENGTH_LONG).show()
+                }
+                else
+                {
+                    Toast.makeText(this@ActivityDetail, "Data Masih Kosong", Toast.LENGTH_LONG).show()
+                }
+            }
         })
     }
 }

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityRegister"></activity>
+        <activity android:name=".ActivityPembayaran"></activity>
+        <activity android:name=".ActivityRegister" />
         <activity android:name=".ActivityDetail" />
         <activity android:name=".ActivityListProduk" />
         <activity android:name=".ActivityLogin">
@@ -28,6 +29,6 @@
         <activity android:name=".ActivityProfil" />
         <activity android:name=".ActivityTentang" />
         <activity android:name=".ActivityUlasKami" />
-
     </application>
+
 </manifest>

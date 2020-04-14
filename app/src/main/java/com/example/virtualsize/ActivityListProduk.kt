@@ -29,14 +29,14 @@ class ActivityListProduk : AppCompatActivity() {
     lateinit var mSharedPref: SharedPreferences //for saving sort settings
     lateinit var mRecyclerView: RecyclerView
     lateinit var databaseReference: DatabaseReference
-    lateinit var textbarArmada: TextView
+    lateinit var textbarProduk: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listproduk)
 
         setSupportActionBar(toolbarProduk)
-        textbarArmada = findViewById(R.id.textbarProduk) as TextView
+        textbarProduk = findViewById(R.id.textbarProduk) as TextView
         databaseReference = FirebaseDatabase.getInstance().getReference("Produk")
         val query = databaseReference.child(intent.getStringExtra("jenis"))
         query.addValueEventListener(object: ValueEventListener {
@@ -46,7 +46,7 @@ class ActivityListProduk : AppCompatActivity() {
                     for (snapshot1 in datasnapshot.getChildren())
                     {
                         val allocation = snapshot1.getValue(ListProduk::class.java)
-                        textbarArmada.setText(allocation!!.jenis)
+                        textbarProduk.setText(allocation!!.jenis)
                     }
                 }
             }
