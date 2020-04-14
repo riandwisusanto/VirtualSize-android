@@ -90,5 +90,4 @@ class FragmentAkun : Fragment() {
             override fun onCancelled(databaseError: DatabaseError) {}
         })
     }
-
 }

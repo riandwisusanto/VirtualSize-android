@@ -6,7 +6,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.google.firebase.database.*
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_profil.*
 
 class ActivityProfil : AppCompatActivity() {
 

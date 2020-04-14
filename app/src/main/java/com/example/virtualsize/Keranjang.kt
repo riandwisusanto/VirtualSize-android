@@ -9,7 +9,6 @@ class Keranjang {
 
     constructor(){}
     constructor(produk:String, toko:String, harga:String, lokasi:String, gambar:String){
-//        this.user = user
         this.produk = produk
         this.toko = toko
         this.harga = harga

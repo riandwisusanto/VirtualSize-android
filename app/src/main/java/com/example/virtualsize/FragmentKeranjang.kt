@@ -20,17 +20,13 @@ import java.io.ByteArrayOutputStream
 
 class FragmentKeranjang : Fragment() {
 
-    lateinit var mLayoutManager: LinearLayoutManager //for sorting
-    lateinit var mSharedPref: SharedPreferences //for saving sort settings
+    lateinit var mLayoutManager: LinearLayoutManager
     lateinit var mRecyclerView: RecyclerView
-    lateinit var databaseReference: DatabaseReference
-    lateinit var textbarArmada: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_keranjang, container, false)
     }
 
@@ -63,13 +59,7 @@ class FragmentKeranjang : Fragment() {
                         val namaProduk = view.findViewById(R.id.namaProduk) as TextView
                         val namaP = namaProduk.text.toString()
                         val intent = Intent(view.context, ActivityPembayaran::class.java)
-//                        intent.putExtra("namaProduk", namaP)
                         startActivity(intent)
-
-//                        tambahKeranjang.setOnClickListener {
-//                            val add = ListProduk(jenis, produk, toko, harga, lokasi, gambar)
-//                            databaseReference.child(nama).setValue(add)
-//                        }
                     }
                     override fun onItemLongClick(view:View, position:Int) {
 
@@ -78,7 +68,6 @@ class FragmentKeranjang : Fragment() {
                 return viewHolder
             }
         }
-        //set adapter to recyclerview
         mRecyclerView.setAdapter(firebaseRecyclerAdapter)
     }
 }

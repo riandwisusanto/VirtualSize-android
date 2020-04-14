@@ -2,7 +2,6 @@ package com.example.virtualsize
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import kotlinx.android.synthetic.main.fragment_home.*
-
 
 class FragmentHome : Fragment() {
 
@@ -42,14 +40,6 @@ class FragmentHome : Fragment() {
         listPromo.adapter = AdapterPromo(image, this.requireContext())
         val snapHelper: SnapHelper = LinearSnapHelper()
         snapHelper.attachToRecyclerView(listPromo)
-
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//            val w: Window = activity!!.getWindow()
-//            w.setFlags(
-//                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-//                WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS
-//            )
-//        }
 
     }
 

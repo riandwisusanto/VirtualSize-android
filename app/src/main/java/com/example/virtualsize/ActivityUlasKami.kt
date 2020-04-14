@@ -18,7 +18,6 @@ class ActivityUlasKami : AppCompatActivity() {
     lateinit var inputUlasan: EditText
     lateinit var databaseReference: DatabaseReference
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ulaskami)
