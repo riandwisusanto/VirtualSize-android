@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/bg_toolbar"
+        >
+        <ImageView
+            android:focusable="true"
+            android:clickable="true"
+            android:id="@+id/btn_back"
+            android:background="@drawable/ic_back_black"
+            android:padding="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/text_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terima Pesanan"
+            android:textColor="@color/colorBlack"
+            android:textSize="22sp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/btn_back"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fotobarang"
+            android:layout_width="70dp"
+            android:layout_height="70dp"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/namabarang"
+                android:text="xxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Status : "
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:text="menunggu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/harga"
+                    android:text="10000"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/jumlah"
+                    android:text="x1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/terima"
+        android:text="Terima Pesanan Ini"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_kotak_ijo"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/beribintang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:text="Beri Rating untuk Barang ini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RatingBar
+                android:layout_marginLeft="20dp"
+                android:id="@+id/rating"
+                android:stepSize="1.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:text="Ulasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/ulasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"/>
+
+            <Button
+                android:id="@+id/pesananselesai"
+                android:text="Selesai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_kotak_ijo"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

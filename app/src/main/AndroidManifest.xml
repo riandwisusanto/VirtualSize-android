@@ -3,19 +3,26 @@
     package="com.example.virtualsize">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/logo_virtualsize"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityPembayaran"></activity>
-        <activity android:name=".ActivityRegister" />
-        <activity android:name=".ActivityDetail" />
-        <activity android:name=".ActivityListProduk" />
-        <activity android:name=".ActivityLogin">
+        <activity android:name=".keranjang.RiwayatTransaksi"></activity>
+        <activity android:name=".keranjang.terima_pesanan" />
+        <activity android:name=".Chat.MessageActivity" />
+        <activity android:name=".login.ActivityLogin" />
+        <activity android:name=".keranjang.ActivityPembayaran" />
+        <activity android:name=".login.ActivityRegister" />
+        <activity android:name=".homes.ActivityDetail" />
+        <activity android:name=".homes.ActivityListProduk" />
+        <activity android:name=".home.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,12 +30,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ActivityUtama"
+            android:name=".home.ActivityUtama"
             android:screenOrientation="nosensor" />
-        <activity android:name=".ActivityKontak" />
-        <activity android:name=".ActivityProfil" />
-        <activity android:name=".ActivityTentang" />
-        <activity android:name=".ActivityUlasKami" />
+        <activity android:name=".akun.ActivityKontak" />
+        <activity android:name=".akun.ActivityProfil" />
+        <activity android:name=".akun.ActivityTentang" />
+        <activity android:name=".akun.ActivityUlasKami" />
     </application>
 
 </manifest>

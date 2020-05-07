@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "403698290580",
-    "firebase_url": "https://e-commerce-ar.firebaseio.com",
-    "project_id": "e-commerce-ar",
-    "storage_bucket": "e-commerce-ar.appspot.com"
+    "project_number": "1017108383468",
+    "firebase_url": "https://virtualsize-a049c.firebaseio.com",
+    "project_id": "virtualsize-a049c",
+    "storage_bucket": "virtualsize-a049c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:403698290580:android:d07591da4649cadde78981",
+        "mobilesdk_app_id": "1:1017108383468:android:6f87e8a0cef6fd3b14c7c9",
         "android_client_info": {
           "package_name": "com.example.virtualsize"
         }
       },
       "oauth_client": [
         {
-          "client_id": "403698290580-gv96jbvvevrvq7uqa1ohudj9skvjka8f.apps.googleusercontent.com",
+          "client_id": "1017108383468-s5veq4mfijt9m6j2r50rp337tdqam6ds.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.virtualsize",
+            "certificate_hash": "19c089f26bf2203a5fbb47428b30a508110f27c3"
+          }
+        },
+        {
+          "client_id": "1017108383468-kjq9vvucs77lab7h972idraenc6eut33.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC3S6eJ3diRmKSaT1sEOwc_2HYWPlO4Srs"
+          "current_key": "AIzaSyDfH61fqtyxuG7euRcHWGt36IJMyKJ12xw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "403698290580-gv96jbvvevrvq7uqa1ohudj9skvjka8f.apps.googleusercontent.com",
+              "client_id": "1017108383468-kjq9vvucs77lab7h972idraenc6eut33.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

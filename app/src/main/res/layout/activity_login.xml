@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityLogin">
+    tools:context=".login.ActivityLogin">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         app:layout_constraintTop_toTopOf="parent"
@@ -51,7 +51,7 @@
             android:text="Belum punya akun?"
             android:textColor="@color/colorWhite"
             android:textSize="15dp"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
         <Button
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -82,12 +82,10 @@
             android:background="@drawable/itembar"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="50dp"
-        app:cardBackgroundColor="#EEEEEE"
+        android:background="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -99,7 +97,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            tools:ignore="MissingConstraints">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -152,10 +151,27 @@
                 android:backgroundTint="@color/colorPrimary"
                 android:text="Masuk"
                 android:textColor="@color/colorWhite"
-                android:textAlignment="center" >
+                android:textAlignment="center">
             </Button>
 
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bgLoading"/>
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

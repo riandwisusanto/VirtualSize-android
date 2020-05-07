@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical|start"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        >
+        <ImageView
+            android:focusable="true"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:id="@+id/btn_back"
+            android:padding="13dp"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ic_back"
+            tools:ignore="VectorDrawableCompat" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:cardCornerRadius="25dp">
+            <ImageView
+                android:id="@+id/foto_pengguna"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/nama_pengguna"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Iqbalul Hidayat"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="bottom"
+        android:background="@color/colorWhite">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"/>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/colorPrimary"
+        android:gravity="end">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            >
+            <EditText
+                android:id="@+id/formpesan"
+                android:padding="10dp"
+                android:hint="Ketikkan pesan ..."
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/form_signin"
+                android:layout_marginRight="45dp"
+                android:textSize="18sp"
+                android:maxHeight="60dp"
+                />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/send"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="10dp"
+            app:srcCompat="@drawable/ic_send"
+            tools:ignore="VectorDrawableCompat" />
+        >
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

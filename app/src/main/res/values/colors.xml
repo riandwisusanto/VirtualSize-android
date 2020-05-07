@@ -5,6 +5,8 @@
     <color name="colorBlack">#000000</color>
     <color name="colorFirebrick">#F62817</color>
     <color name="colorGold">#FDD017</color>
-
+    <color name="bgLoading">#55000000</color>
+    <color name="transparan">#00000000</color>
+    <color name="colorGreentxt">#34B77A</color>
     <color name="colorAccent">#03DAC5</color>
 </resources>
